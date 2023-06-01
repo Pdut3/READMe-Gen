@@ -86,37 +86,36 @@ inquirer.prompt(
 })=>{
     const template = `# ${title}
     
-    * [Description](#description)
-    * [Table of Contents](#tOc)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Contribution](contribution)
-    * [Test](test)
-    * [Questions](questions)
-    ## Description
-    ${description}
-    ## Table of Contents
-    ${tOc}
-    ## Installation
-    ${installation}
-    ## Usage
-    ${usage}
-    ## License
-    ${license}
-    ## Contribution
-    ${contribute}
-    ## Test
-    ${test}
-    ## Questions
-    ${questions}
+* [Description](#description)
+* [Table of Contents](#tOc)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](contribution)
+* [Test](test)
+* [Questions](questions)
+ ## Description
+${description}
+ ## Table of Contents
+${tOc}
+## Installation
+${installation}
+## Usage
+${usage}
+## License
+${license}
+## Contribution
+${contribute}
+## Test
+${test}
+## Questions
+${questions}
 
-    # Contact
-    * GitHub :${git}
-    * Email :${email}`;
+# Contact
+* GitHub :${git}
+* Email :${email}`;
     
-    writeToFile(title, template);  
-});
+writeToFile(title, template);  });
 
 function writeToFile(fileName, data) {
     fs.writeFile(`./${fileName.toUpperCase().split(' ').join('')}.md`,data,(err)=>{
